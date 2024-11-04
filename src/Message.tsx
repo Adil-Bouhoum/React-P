@@ -1,12 +1,11 @@
+import User from "./User.tsx"
 
-
-function Message() {
-    const name = 'Adil';
-
-    if(name) 
-      return <h1>Hello {name}</h1>;
-    return <h1>Hello world</h1>;
+interface MessageProps {
+  text: string;
 }
 
+function Message({ text }: MessageProps) {
+  return <h2>{text}<User name="Adil Bouhoum" age={21} isMember={false}/></h2>;
+}
 
-  export default Message;
+export default Message;
